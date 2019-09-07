@@ -1,3 +1,12 @@
+<?php
+    if(file_exists($_SERVER['DOCUMENT_ROOT']."\user.txt"))
+    {
+        echo sprintf('<p>Users: %s</p>', sizeof(file($_SERVER['DOCUMENT_ROOT']."\user.txt")));
+    }
+    else{
+        echo 'Users: 0';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
